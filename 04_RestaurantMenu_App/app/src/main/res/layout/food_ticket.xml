@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="65pt"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="3pt">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:background="@drawable/background_ticket"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFood"
+            android:layout_width="50pt"
+            android:layout_height="50pt"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtFood"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
