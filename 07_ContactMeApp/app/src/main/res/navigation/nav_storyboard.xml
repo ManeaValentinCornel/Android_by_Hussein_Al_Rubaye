@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_storyboard"
+    app:startDestination="@id/mainPage">
+
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="com.vcmanea.contactmeapp.Fragments.MainFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPage_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_mainPage_to_contactFragment"
+            app:destination="@id/contactFragment"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.vcmanea.contactmeapp.Fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.vcmanea.contactmeapp.Fragments.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contactFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.vcmanea.contactmeapp.Fragments.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" >
+        <argument
+            android:name="msg"
+            app:argType="string"
+            android:defaultValue='"Nothing"' />
+    </fragment>
+</navigation>
